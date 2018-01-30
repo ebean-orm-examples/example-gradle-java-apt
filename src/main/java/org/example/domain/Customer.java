@@ -14,8 +14,6 @@ public class Customer extends BaseDomain {
   @NotNull
   String name;
 
-  //String foo;
-
   LocalDate startDate;
 
   @Lob

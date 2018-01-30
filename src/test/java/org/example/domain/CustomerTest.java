@@ -12,5 +12,6 @@ public class CustomerTest {
 		Customer customer = new Customer("Rob");
 		customer.save();
 
+		assertNotNull(customer.getId());
 	}
 }
