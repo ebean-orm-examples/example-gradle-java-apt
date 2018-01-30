@@ -1,5 +1,6 @@
 package org.example.domain;
 
+import org.example.domain.query.QCustomer;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -13,5 +14,13 @@ public class CustomerTest {
 		customer.save();
 
 		assertNotNull(customer.getId());
+	}
+
+	@Test
+	public void queryBean() {
+
+		new QCustomer()
+				.name.startsWith("Frank")
+				.findList();
 	}
 }
